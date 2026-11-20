@@ -35,3 +35,9 @@ The zip contains the integration files at its root (what HACS expects with `zip_
 `hacs.json` needs `"zip_release": true` and `"filename": "<domain>.zip"`.
 
 Versions of this workflow are tagged (`v1`, …); callers pin a major tag.
+
+## GitHub Sponsors (prepared, not active)
+
+[GITHUB-SPONSORS.md](GITHUB-SPONSORS.md) (English and German) holds the profile texts, the suggested tiers
+and the steps for the one-time setup. `tools/activate_sponsors.py` adds the Sponsor button to the funding
+file and the READMEs of the repositories once GitHub has approved the profile.
