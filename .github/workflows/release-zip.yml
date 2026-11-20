@@ -1,0 +1,93 @@
+name: Release zip (reusable)
+
+# Builds the HACS release zip for a Home Assistant integration, checks that the tag matches the
+# manifest version, and creates or updates the GitHub release with the matching CHANGELOG
+# section and the zip attached. Call it from a repository like this:
+#
+#   on:
+#     push:
+#       tags: ["v*"]
+#   permissions:
+#     contents: write
+#   jobs:
+#     release:
+#       uses: Ebenhoeh80/.github/.github/workflows/release-zip.yml@v1
+#       with:
+#         domain: welock
+
+on:
+  workflow_call:
+    inputs:
+      domain:
+        description: Integration domain, for example welock (folder under custom_components)
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check that the tag matches the manifest version
+        env:
+          DOMAIN: ${{ inputs.domain }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          python3 - <<'PY'
+          import json, os, sys
+
+          domain, tag = os.environ["DOMAIN"], os.environ["TAG"]
+          with open(f"custom_components/{domain}/manifest.json", encoding="utf-8") as handle:
+              version = json.load(handle)["version"]
+          if tag != f"v{version}":
+              sys.exit(f"Tag {tag} does not match manifest version {version}")
+          print(f"Tag {tag} matches manifest version {version}")
+          PY
+
+      - name: Extract the release notes from CHANGELOG.md
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          python3 - <<'PY'
+          import os, re
+
+          version = os.environ["TAG"].lstrip("v")
+          text = ""
+          if os.path.exists("CHANGELOG.md"):
+              with open("CHANGELOG.md", encoding="utf-8") as handle:
+                  text = handle.read()
+          match = re.search(
+              r"^## \[" + re.escape(version) + r"\][^\n]*\n(.*?)(?=^## \[|\Z)", text, re.S | re.M
+          )
+          notes = match.group(1).strip() if match else "See CHANGELOG.md."
+          with open("release-notes.md", "w", encoding="utf-8") as handle:
+              handle.write(notes + "\n")
+          PY
+
+      - name: Build the zip (integration files at the zip root)
+        env:
+          DOMAIN: ${{ inputs.domain }}
+        run: |
+          set -euxo pipefail
+          ZIP_NAME="${DOMAIN}.zip"
+          rm -rf dist "${ZIP_NAME}"
+          mkdir -p dist
+          # HACS extracts the zip into custom_components/<domain>/, so there is no top-level folder.
+          cp -a "custom_components/${DOMAIN}/." "dist/"
+          (cd dist && zip -r "../${ZIP_NAME}" . -x "**/__pycache__/**" "**/*.pyc" "**/.DS_Store")
+          # manifest.json must sit at the zip root.
+          unzip -l "${ZIP_NAME}" | head -n 50
+          unzip -l "${ZIP_NAME}" | grep -q "^ *[0-9].*manifest.json$"
+
+      - name: Create or update the release and attach the zip
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          body_path: release-notes.md
+          files: ${{ inputs.domain }}.zip
+          prerelease: ${{ contains(github.ref_name, '-') }}

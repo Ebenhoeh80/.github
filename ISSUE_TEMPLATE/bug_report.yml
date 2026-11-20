@@ -1,0 +1,52 @@
+name: Bug report
+description: Something does not work as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! This is a hobby project, so help is voluntary and best effort.
+        Please update to the latest release first, and search existing issues.
+  - type: input
+    id: ha_version
+    attributes:
+      label: Home Assistant version
+      placeholder: "2026.11.2"
+    validations:
+      required: true
+  - type: input
+    id: integration_version
+    attributes:
+      label: Integration version (shown in HACS)
+      placeholder: "2.3.0"
+    validations:
+      required: true
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: false
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics and log lines
+      description: |
+        Paste the relevant log lines (debug logging enabled) and attach the diagnostics download
+        (Settings → Devices & services → the integration → ⋮ → Download diagnostics).
+        Remove anything personal first.
+      render: text
+    validations:
+      required: false
+  - type: checkboxes
+    id: ai
+    attributes:
+      label: AI assistance
+      options:
+        - label: I used an AI assistant to prepare this report and I checked that it is correct.
