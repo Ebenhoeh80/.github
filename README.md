@@ -36,8 +36,29 @@ The zip contains the integration files at its root (what HACS expects with `zip_
 
 Versions of this workflow are tagged (`v1`, …); callers pin a major tag.
 
-## GitHub Sponsors (prepared, not active)
+## GitHub Sponsors (active)
 
-[GITHUB-SPONSORS.md](GITHUB-SPONSORS.md) (English and German) holds the profile texts, the suggested tiers
-and the steps for the one-time setup. `tools/activate_sponsors.py` adds the Sponsor button to the funding
-file and the READMEs of the repositories once GitHub has approved the profile.
+[SPONSORS-CONTENT.md](SPONSORS-CONTENT.md) holds the final copy-paste profile texts (English and German),
+tiers and goal. [GITHUB-SPONSORS.md](GITHUB-SPONSORS.md) keeps the background and setup principles.
+`tools/activate_sponsors.py` adds the Sponsor button and the `FUNDING.yml` entry to the repositories.
+
+## ❤️ Support this project
+
+<div align="center">
+
+**I maintain these shared community files and workflows in my free time and cover the running costs myself.**
+
+Sponsoring is voluntary and does not buy support, features or response times. Every contribution, however small, helps. Thank you! 🙏
+
+<a href="https://github.com/sponsors/Ebenhoeh80">
+  <img src="https://img.shields.io/badge/%E2%9D%A4%20Sponsor%20on%20GitHub-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="GitHub Sponsors" height="42">
+</a>
+<a href="https://www.paypal.com/pool/9p84qTHCFr?sr=wccr">
+  <img src="https://img.shields.io/badge/%E2%9D%A4%20Donate%20via%20PayPal-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate via PayPal" height="42">
+</a>
+<a href="https://buymeacoffee.com/daneben">
+  <img src="https://img.shields.io/badge/%E2%98%95%20Buy%20me%20a%20coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee" height="42">
+</a>
+
+</div>
+

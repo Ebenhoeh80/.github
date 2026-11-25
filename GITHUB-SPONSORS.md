@@ -1,7 +1,8 @@
 # GitHub Sponsors: preparation / Vorbereitung
 
-**Status:** prepared, **not active**. Nothing in the repositories points to GitHub Sponsors yet.
-Everything below is ready to use as soon as the profile has been approved.
+**Status:** the sponsor page is live at <https://github.com/sponsors/Ebenhoeh80> but still shows GitHub's default text.
+The final, copy-paste ready content (English first, then German) is in **[SPONSORS-CONTENT.md](SPONSORS-CONTENT.md)**.
+This file keeps the background, the manual setup steps and the principles.
 *(Deutsch: siehe weiter unten.)*
 
 - [English](#english)
@@ -64,7 +65,7 @@ tax, and possibly VAT unless the small-business rule applies. Ask a tax advisor 
 No tier promises anything contractual (no priority support, no feature guarantees). An optional goal:
 *"Bluetooth proxies and test hardware: 100 €"*.
 
-### 4. After GitHub has approved the profile (the assistant does this)
+### 4. After GitHub approved the profile (done locally)
 
 1. In a clone of every repository (`welock-bluetooth`, `zte-h186`, `ha-maxcube`, `.github`) run
    `python tools/activate_sponsors.py <folders>`. It adds `github: Ebenhoeh80` to `FUNDING.yml` and a
@@ -144,7 +145,7 @@ Vor der ersten Auszahlung bitte einen Steuerberater fragen.
 Keine Stufe verspricht etwas Vertragliches (kein Vorrang-Support, keine Funktionszusagen). Ein optionales
 Ziel: *„Bluetooth-Proxys und Testgeräte: 100 €“*.
 
-### 4. Nachdem GitHub das Profil freigegeben hat (das erledigt der Assistent)
+### 4. Nachdem GitHub das Profil freigegeben hat (lokal erledigt)
 
 1. In einem Klon jedes Repositorys (`welock-bluetooth`, `zte-h186`, `ha-maxcube`, `.github`)
    `python tools/activate_sponsors.py <Ordner>` ausführen. Das Skript trägt `github: Ebenhoeh80` in die
