@@ -30,32 +30,37 @@ English first, German second. Every block is copy-paste ready.
 > Prefer to stay anonymous? Choose a private sponsorship. I never publish a sponsor's name without their
 > explicit consent.
 
-### 3. Monthly tiers
+### 3. Monthly tiers (live)
 
-| Tier name | Price | Description |
-| :--- | :--- | :--- |
-| Coffee | 3 € / month | A small thank-you. Covers the electricity for one more round of testing. |
-| Supporter | 5 € / month | Helps maintain the integrations and replace test hardware when it wears out. |
-| Backer | 10 € / month | Covers a meaningful share of tools, adapters and ongoing maintenance. |
-| Patron | 25 € / month | Keeps long-term maintenance possible – updates, tests and new test devices. |
+| Amount (USD) | Description |
+| :--- | :--- |
+| $3 / month | A small thank-you. Covers the electricity for one more round of testing. |
+| $5 / month | Helps maintain the integrations and replace test hardware when it wears out. |
+| $10 / month | Covers a meaningful share of tools, adapters and ongoing maintenance. |
+| $25 / month | Keeps long-term maintenance possible – updates, tests and new test devices. |
 
+GitHub names tiers automatically from the amount (e.g. "$3 a month"); custom tier names are not available.
 All four tiers give the same thing: my gratitude and no contractual claims. The only difference is how much
-of the running costs they cover. This is intentional – you don't need to compare "perks" to choose.
+of the running costs they cover – you don't need to compare "perks" to choose.
 
 ### 4. One-time tier
 
-| Field | Value |
+One amount per one-time tier, so five tiers are published:
+
+| Amount (USD) | Description |
 | :--- | :--- |
-| Tier name | One-time thank-you |
-| Description | A single contribution, no subscription. Pick whatever feels right. |
-| Suggested amounts | 5 € · 10 € · 25 € · 50 € · 100 € |
+| $5 | A single contribution, no subscription. Pick whatever feels right. |
+| $10 | A single contribution, no subscription. Pick whatever feels right. |
+| $25 | A single contribution, no subscription. Pick whatever feels right. |
+| $50 | A single contribution, no subscription. Pick whatever feels right. |
+| $100 | A single contribution, no subscription. Pick whatever feels right. |
 
 ### 5. Goal
 
 | Field | Value |
 | :--- | :--- |
 | Title | Bluetooth proxies & test hardware |
-| Amount | 100 € |
+| Amount | $100 |
 | Description | A few Bluetooth proxies and spare adapters let me test the WeLock integration in more setups – and keep it working after Home Assistant updates. |
 
 ### 6. Welcome message (same text for every tier)
@@ -84,7 +89,7 @@ sponsors only**. Never present this as a tier reward – it is a courtesy, not a
 5. **Sponsorship goal** – section 5.
 6. For each tier: **Display welcome message** → paste section 6.
 7. Save, then open <https://github.com/sponsors/Ebenhoeh80> and read it as a first-time visitor.
-8. The Sponsor buttons and `FUNDING.yml` entries have already been added locally with `tools/activate_sponsors.py`; re-check them after the profile is filled.
+8. The Sponsor buttons and `FUNDING.yml` entries are already live. The nine tiers were created and published via GraphQL (`user` scope). Profile text and the goal have no API mutation and must be set in the web UI.
 
 ---
 
@@ -111,33 +116,37 @@ sponsors only**. Never present this as a tier reward – it is a courtesy, not a
 > Lieber anonym bleiben? Wähle ein privates Sponsoring. Ich veröffentliche keinen Namen ohne ausdrückliche
 > Zustimmung.
 
-### 3. Monatliche Stufen
+### 3. Monatliche Stufen (live)
 
-| Stufe | Betrag | Beschreibung |
-| :--- | :--- | :--- |
-| Kaffee | 3 € / Monat | Ein kleines Dankeschön. Deckt den Strom für eine weitere Testreihe. |
-| Unterstützer | 5 € / Monat | Hilft bei der Pflege und beim Ersatz verschleißter Testgeräte. |
-| Förderer | 10 € / Monat | Deckt einen nennenswerten Teil von Werkzeugen, Adaptern und laufender Pflege. |
-| Gönner | 25 € / Monat | Macht langfristige Pflege möglich – Updates, Tests und neue Testgeräte. |
+| Betrag (USD) | Beschreibung |
+| :--- | :--- |
+| $3 / Monat | Ein kleines Dankeschön. Deckt den Strom für eine weitere Testreihe. |
+| $5 / Monat | Hilft bei der Pflege und beim Ersatz verschleißter Testgeräte. |
+| $10 / Monat | Deckt einen nennenswerten Teil von Werkzeugen, Adaptern und laufender Pflege. |
+| $25 / Monat | Macht langfristige Pflege möglich – Updates, Tests und neue Testgeräte. |
 
-Alle vier Stufen bewirken dasselbe: meine Dankbarkeit und keine vertraglichen Ansprüche. Der einzige
-Unterschied ist, wie viel der laufenden Kosten sie abdecken. Das ist Absicht – du musst keine „Vorteile“
-vergleichen, um dich zu entscheiden.
+GitHub benennt Stufen automatisch nach dem Betrag (z. B. „$3 a month“); eigene Namen sind nicht möglich.
+Alle vier Stufen bewirken dasselbe: meine Dankbarkeit und keine vertraglichen Ansprüche. Der Unterschied
+ist nur, wie viel der laufenden Kosten sie abdecken – du musst keine „Vorteile“ vergleichen.
 
 ### 4. Einmalige Stufe
 
-| Feld | Wert |
+Pro Einmal-Stufe ist nur ein Betrag möglich – veröffentlicht sind daher fünf Stufen:
+
+| Betrag (USD) | Beschreibung |
 | :--- | :--- |
-| Name der Stufe | Einmaliges Dankeschön |
-| Beschreibung | Ein einzelner Beitrag, kein Abo. Wähle, was sich für dich richtig anfühlt. |
-| Vorgeschlagene Beträge | 5 € · 10 € · 25 € · 50 € · 100 € |
+| $5 | Ein einzelner Beitrag, kein Abo. Wähle, was sich für dich richtig anfühlt. |
+| $10 | Ein einzelner Beitrag, kein Abo. Wähle, was sich für dich richtig anfühlt. |
+| $25 | Ein einzelner Beitrag, kein Abo. Wähle, was sich für dich richtig anfühlt. |
+| $50 | Ein einzelner Beitrag, kein Abo. Wähle, was sich für dich richtig anfühlt. |
+| $100 | Ein einzelner Beitrag, kein Abo. Wähle, was sich für dich richtig anfühlt. |
 
 ### 5. Ziel
 
 | Feld | Wert |
 | :--- | :--- |
 | Titel | Bluetooth-Proxys & Testgeräte |
-| Betrag | 100 € |
+| Betrag | $100 |
 | Beschreibung | Ein paar Bluetooth-Proxys und Ersatzadapter erlauben es, die WeLock-Integration in mehr Umgebungen zu testen – und sie nach Home-Assistant-Updates am Laufen zu halten. |
 
 ### 6. Begrüßungsnachricht (identisch für alle Stufen)
@@ -166,4 +175,4 @@ Nur **öffentliche** Sponsoren auflisten. Nie als Stufen-Vorteil bewerben – es
 5. **Sponsorship goal** – Abschnitt 5.
 6. Bei jeder Stufe: **Display welcome message** → Abschnitt 6 einfügen.
 7. Speichern, dann <https://github.com/sponsors/Ebenhoeh80> öffnen und wie ein Erstbesucher lesen.
-8. Die Sponsor-Knöpfe und `FUNDING.yml`-Einträge wurden lokal bereits mit `tools/activate_sponsors.py` ergänzt; nach dem Befüllen des Profils nochmals prüfen.
+8. Sponsor-Knöpfe und `FUNDING.yml`-Einträge sind live. Die neun Stufen wurden per GraphQL (`user`-Scope) angelegt und veröffentlicht. Profiltext und Ziel haben keine API-Mutation und müssen in der Weboberfläche gesetzt werden.
