@@ -85,7 +85,7 @@ jobs:
           unzip -l "${ZIP_NAME}" | grep -q "^ *[0-9].*manifest.json$"
 
       - name: Create or update the release and attach the zip
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ github.ref_name }}
           body_path: release-notes.md
