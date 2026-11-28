@@ -1,5 +1,7 @@
 # Ebenhoeh80/.github
 
+[Deutsch](README.de.md) · [English](README.md)
+
 Shared community health files and reusable workflows for my Home Assistant integrations
 ([welock-bluetooth](https://github.com/Ebenhoeh80/welock-bluetooth),
 [zte-h186](https://github.com/Ebenhoeh80/zte-h186),
